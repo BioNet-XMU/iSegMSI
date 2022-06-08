@@ -2,7 +2,7 @@
 
 iSegMSI provides a novel interactive segmentation strategy for MSI data. It could improve segmentation results by  subdividing or merging inappropriate regions into proper regions specified by scribbles. Developer is Lei Guo from Laboratory of Biomedical Network, Department of Electronic Science, Xiamen University of China.
 
-# Overview of dc-DeepMSI
+# Overview of iSegMSI
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/70273368/172561018-b1ccd866-36b4-4890-9cb3-88e367191c19.png" width="600" height="500" /><br/>
