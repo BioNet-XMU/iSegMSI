@@ -22,8 +22,13 @@ __Schematic overflow of the iSegMSI model.__ (A) Architecture of the iSegMSI mod
 
     numpy >= 1.8.0
     
+# Quickly start
 
-# Run iSegMSI model
+## Preprocessing
+
+Here, MSI data preprocessing including spectral alignment, peak detection, peak binning, peak filtering and peak pooling. Among them, spectral alignment, peak detection, peak binning are achieved using R package "MALDIquant", peak filtering and peak pooling are carried out by in-house Python scripts.
+
+## Run iSegMSI model
 
 cd to the iSegMSI fold
 
