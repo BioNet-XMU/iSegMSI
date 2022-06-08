@@ -24,9 +24,9 @@ __Schematic overflow of the iSegMSI model.__ (A) Architecture of the iSegMSI mod
     
 # Quickly start
 
-## Preprocessing
+## Input
 
-Here, MSI data preprocessing including spectral alignment, peak detection, peak binning, peak filtering and peak pooling. Among them, spectral alignment, peak detection, peak binning are achieved using R package "MALDIquant", peak filtering and peak pooling are carried out by in-house Python scripts.
+The input is the preprocessed MSI data with two-dimensional shape [X*Y,P], where X and Y represent the pixel numbers of horizontal and vertical coordinates of MSI data, and P represents the number of ions.
 
 ## Run iSegMSI model
 
@@ -40,7 +40,7 @@ If you want to perfrom iSegMSI for interactive segmentation, taking fetus mouse 
 
     python run.py -input_file .../data/fetus_mouse.txt --input_shape 202,107,3 --use_scribble True -- input_scribble .../data/fetus_mouse_scribble.txt --output_file output.txt
 
-    
+
 
 
 
