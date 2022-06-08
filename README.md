@@ -14,12 +14,23 @@ __Schematic overflow of the iSegMSI model.__ (A) Architecture of the iSegMSI mod
 
     python == 3.5, 3.6 or 3.7
     
-    pytorch == 
+    pytorch == 1.8.2
+    
+    opencv == 4.5.3
+    
+    matplotlib == 2.2.2
 
     numpy >= 1.8.0
     
 
 # Run iSegMSI model
+
+cd to the iSegMSI fold
+
+If you want to perfrom iSegMSI for unsupervised segmentation, taking fetus mouse data as an example, run:
+
+    python run.py -input_file ...\data\fetus_mouse.txt -input_shape [202,107,3] -scribble False 
+    
 
 
 
