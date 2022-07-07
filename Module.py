@@ -161,8 +161,6 @@ def Feature_Clustering(Embedding_data,args):
             print("nLabels", nLabels, "reached minLabels", args.minLabels, ".")
             break
 
-    cv2.imwrite(args.output_file + '.png', im_target_rgb)
-
     if args.remove_artifacts:
         im_target = remove_artifacts(Embedding_data,im_target,args)
         im_target = remove_artifacts(Embedding_data,im_target,args)
@@ -173,5 +171,7 @@ def Feature_Clustering(Embedding_data,args):
         cv2.imshow("output", im_target_rgb)
         cv2.waitKey(50)
         cv2.imwrite(args.output_file + '.png',im_target_rgb)
+        
+    cv2.imwrite(args.output_file + '.png', im_target_rgb)
 
     return im_target
