@@ -45,5 +45,3 @@ If you want to perfrom iSegMSI for interactive segmentation, taking fetus mouse 
 
 Please contact me if you have any help: gankLei@stu.xmu.edu.cn
 
-# Citation
-...
