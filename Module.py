@@ -45,7 +45,6 @@ def Feature_Clustering(Embedding_data,args):
     data = Variable(data)
     # load scribble
 
-
     if args.use_scribble:
 
         # scribble = np.loadtxt('data/fetus_mouse_scribble.txt')
@@ -97,16 +96,12 @@ def Feature_Clustering(Embedding_data,args):
         model.cuda()
     model.train()
 
-    # similarity loss definition
     loss_sim = torch.nn.CrossEntropyLoss()
 
-    # scribble loss definition
     loss_scr = torch.nn.CrossEntropyLoss()
 
-    # Entropy loss definition
     loss_ent = MaxEntropy()
 
-    # continuity loss definition
     loss_hpy = torch.nn.L1Loss(size_average=True)
     loss_hpz = torch.nn.L1Loss(size_average=True)
 
@@ -120,7 +115,7 @@ def Feature_Clustering(Embedding_data,args):
     optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=0.9)
 
     for epoch in range(args.maxIter):
-        # forwarding
+
         optimizer.zero_grad()
         output = model(data)[0]
         output = output.permute(1, 2, 0).contiguous().view(-1, args.nChannel)
@@ -138,9 +133,10 @@ def Feature_Clustering(Embedding_data,args):
         if args.visualize:
             im_target_rgb = label2RGB(im_target,args)
             cv2.imshow("output", im_target_rgb)
+            cv2.imwrite(args.output_file + '.png', im_target_rgb)
             cv2.waitKey(10)
 
-        # loss
+
         if args.use_scribble == True:
 
             loss = args.stepsize_sim * loss_sim(output[inds_sim],target[inds_sim]) + \
@@ -171,7 +167,5 @@ def Feature_Clustering(Embedding_data,args):
         cv2.imshow("output", im_target_rgb)
         cv2.waitKey(50)
         cv2.imwrite(args.output_file + '.png',im_target_rgb)
-        
-    cv2.imwrite(args.output_file + '.png', im_target_rgb)
 
     return im_target
