@@ -22,6 +22,8 @@ __Schematic overflow of the iSegMSI model.__ (A) Architecture of the iSegMSI mod
 
     numpy >= 1.8.0
     
+    umap == 0.5.1
+    
 # Quickly start
 
 ## Input
