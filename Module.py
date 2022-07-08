@@ -138,6 +138,7 @@ def Feature_Clustering(Embedding_data,args):
         if args.visualize:
             im_target_rgb = label2RGB(im_target,args)
             cv2.imshow("output", im_target_rgb)
+            cv2.imwrite(args.output_file + '.png', im_target_rgb)
             cv2.waitKey(10)
 
         # loss
@@ -172,6 +173,6 @@ def Feature_Clustering(Embedding_data,args):
         cv2.waitKey(50)
         cv2.imwrite(args.output_file + '.png',im_target_rgb)
         
-    cv2.imwrite(args.output_file + '.png', im_target_rgb)
+
 
     return im_target
