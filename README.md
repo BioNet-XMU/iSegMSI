@@ -43,6 +43,10 @@ If you want to perfrom iSegMSI for interactive segmentation, taking fetus mouse 
 
     python run.py -input_file .../data/fetus_mouse.txt --input_shape 202 107 1237 --DR_mode umap --n_components 3 --use_scribble 1 -- input_scribble .../data/fetus_mouse_scribble.txt --output_file output.txt
 
+If you want to perfrom iSegMSI for hyperparameter search, taking fetus mouse data as an example, run:
+
+    python hyperparameter_earch.py -input_file .../data/fetus_mouse.txt --input_shape 202 107 1237 --DR_mode umap --n_components 3 --use_scribble 0 --output_file output
+    
 # Contact
 
 Please contact me if you have any help: gankLei@stu.xmu.edu.cn
