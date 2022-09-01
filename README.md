@@ -1,6 +1,6 @@
 # iSegMSI
 
-iSegMSI provides a novel interactive segmentation strategy for MSI data. It could improve segmentation results by subdividing or merging inappropriate regions into proper regions specified by scribbles. The proposed iSegMSI model framework supports three dimensionality reduction methods, PCA, t-SNE and UMAP. In pratical, a researcher can choose different dimensionality reduction algorithms and any dimensions for downstream data analysis or retain higher dimensions to improve segmentation performance. Developer is Lei Guo from Laboratory of Biomedical Network, Department of Electronic Science, Xiamen University of China.
+iSegMSI provides a novel interactive segmentation strategy for MSI data. It could improve segmentation results by subdividing or merging inappropriate regions into proper regions specified by scribbles. The proposed iSegMSI model framework supports three dimensionality reduction methods, PCA, PCA + t-SNE and UMAP. In pratical, a researcher can choose different dimensionality reduction algorithms and any dimensions for downstream data analysis or retain higher dimensions to improve segmentation performance. Developer is Lei Guo from Laboratory of Biomedical Network, Department of Electronic Science, Xiamen University of China.
 
 # Overview of iSegMSI
 
